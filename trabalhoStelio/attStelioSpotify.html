@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UX Case Study - Spotify</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -82,6 +80,13 @@
             margin-top: 15px;
         }
 
+        .img-spotifu {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
         /* Ajuste para reduzir o tamanho do banner */
         .hero-img {
             height: 350px;
@@ -130,6 +135,16 @@
             border-left: 5px solid var(--spotify-green);
         }
 
+        /* Estilo para os novos textos explicativos */
+        .h-explanation {
+            font-size: 0.85rem;
+            color: var(--spotify-green);
+            margin-top: 10px;
+            font-style: italic;
+            border-top: 1px solid #333;
+            padding-top: 10px;
+        }
+
         footer {
             border-top: 1px solid #282828;
             padding: 40px 0;
@@ -160,7 +175,6 @@
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <div class="img-container hero-img">
-                        <!-- SUA IMAGEM LOCAL -->
                         <img src="../imagens/images.jpeg" alt="Spotify UI">
                     </div>
                 </div>
@@ -181,8 +195,10 @@
                     <h5>Status do Sistema</h5>
                     <p class="text-secondary small">Feedback visual em tempo real sobre o que está tocando e o tempo
                         restante da faixa.</p>
+                    <p class="h-explanation">Significado: Manter o usuário informado sobre o que ocorre no sistema para evitar incertezas.</p>
+                    
                     <div class="img-container card-img">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=400"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhaVz2hMH7arxDmtK7eyGNRSgVeAOl-or2Y0cM3znzh89r4akHPSYAtY1t9ob"
                             alt="Status">
                     </div>
                 </div>
@@ -194,8 +210,10 @@
                     <h5>Mundo Real</h5>
                     <p class="text-secondary small">Utilização de ícones universais (Play, Pause, Coração) que o usuário
                         já conhece.</p>
+                    <p class="h-explanation">Significado: Usar conceitos e símbolos familiares do dia a dia (metáforas) em vez de termos técnicos.</p>
+
                     <div class="img-container card-img">
-                        <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=400"
+                        <img src="data:image/png;base64,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"
                             alt="Interface">
                     </div>
                 </div>
@@ -207,15 +225,16 @@
                     <h5>Reconhecimento</h5>
                     <p class="text-secondary small">Sugestões baseadas no histórico facilitam a navegação sem exigir
                         esforço de memória.</p>
-                    <div class="img-container card-img">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=400"
+                    <p class="h-explanation">Significado: Mostrar opções visíveis para que o usuário não precise decorar caminhos ou nomes.</p>
+
+                    <div class="img-spotifu card-img">
+                        <img src="../imagens/spotifu.jpeg"
                             alt="Descoberta">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SEÇÃO DE ANÁLISE DETALHADA -->
         <div class="row g-4 mb-5">
             <div class="col-md-6">
                 <div class="analysis-box h-100">
@@ -249,9 +268,8 @@
             </div>
         </div>
 
-        <!-- CONCLUSÃO / EVOLUÇÃO TÉCNICA -->
         <section class="py-5 text-center bg-white text-dark rounded-4 shadow-lg mb-5 mx-2">
-            <h2 class="fw-bold">Conclusão Técnica</h2>
+            <h2 class="fw-bold">Proposta de Melhoria</h2>
             <div class="container px-md-5 mt-3">
                 <p class="lead">
                     O Spotify é um exemplo sólido de IHC. Como proposta de evolução, a implementação de uma
